@@ -9,6 +9,6 @@ public class HelloController {
 
     @GetMapping("/")
     public String index() {
-        return "Greetings from Spring Boot!";
+        return "Start page and list of all available classes";
     }
 }

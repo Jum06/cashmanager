@@ -26,7 +26,6 @@ public class CashmanagerApplication {
 			for (String beanName : beanNames) {
 				System.out.println(beanName);
 			}
-
 		};
 	}
 
