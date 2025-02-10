@@ -1,2 +1,0 @@
-INSERT INTO CLASS_ENTITY (id, name, balance) VALUES (1, '4AHITS', 500.00);
-INSERT INTO CLASS_ENTITY (id, name, balance) VALUES (2, '4BHITS', 300.00);

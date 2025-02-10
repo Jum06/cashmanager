@@ -5,13 +5,13 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "users")
-public class User {
+public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    private String firstName;
+    private String lastName;
 
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -19,8 +19,18 @@ public class User {
     @ManyToOne
     @JoinColumn(name = "class_id")
     private ClassEntity classEntity;
+
+    public Student(String firstName, String lastName, int classId) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.role = Role.STUDENT;
+    }
+
+
+    public Student() {
+
+    }
+
+
 }
 
-enum Role {
-    STUDENT, CASHIER, ADMIN
-}

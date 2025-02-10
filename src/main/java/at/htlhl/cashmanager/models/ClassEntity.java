@@ -6,6 +6,7 @@ import java.util.List;
 
 @Data
 @Entity
+@Table(name = "classes")
 public class ClassEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,5 +16,5 @@ public class ClassEntity {
     private double balance; // Kassenbestand
 
     @OneToMany(mappedBy = "classEntity", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<User> users;
+    private List<Student> users;
 }
